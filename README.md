@@ -2,7 +2,7 @@
 
 A web application that allows you to ask questions about video content using AI-powered transcript analysis and timestamp navigation.
 
-*This was vibe coded with Claude Code.*
+*I did not write this code, Claude Code did.*
 
 ## Features
 
