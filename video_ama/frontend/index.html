@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video AMA</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Video AMA</h1>
+            <p>This was vibe coded with Claude Code.</p>
+        </header>
+        
+        <main class="main-content">
+            <!-- Video Section -->
+            <div class="video-section">
+                <div class="video-upload">
+                    <input type="file" id="videoFile" accept="video/*" />
+                    <button id="uploadBtn" disabled>Process Video</button>
+                    <div class="file-info" id="fileInfo"></div>
+                </div>
+                
+                <div class="video-container" id="videoContainer" style="display: none;">
+                    <video id="videoPlayer" controls>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-info">
+                        <p id="videoStatus">Ready for questions</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Section -->
+            <div class="chat-section">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message system-message">
+                            <p>Upload a video to start asking questions!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <input type="text" id="questionInput" placeholder="Ask a question about the video..." disabled />
+                        <button id="askBtn" disabled>Ask</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Loading overlay -->
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p>Processing video...</p>
+        </div>
+    </div>
+    
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
